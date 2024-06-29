@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/tax.css">
+    
+    <title>Transações</title>
+</head>
+<body>
+    <section id="Transações">
+
+
+        <div class="form-container">
+            <h2>Transações</h2>
+            <form id="transactionForm" action="sucess.html" method="get">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Seu CPF" required>
+                <label for="valor">Doação</label>
+                <input type="text" id="valor" name="valor" placeholder="Valor da Doação" required>
+
+                <label for="pagamento">Método de Pagamento</label>
+                <select id="pagamento" name="pagamento">
+                    <option value="Débito">Débito</option>
+                    <option value="Crédito">Crédito</option>
+                    <option value="Transferência bancária">Transferência bancária</option>
+                    <option value="Boleto">Boleto</option>
+                    <option value="Pix">Pix</option>
+                <option value="Cheque">Cheque</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit">Confirmar</button>  
+            </form>
+        </div>
+    </section>
+    
+</body>
+
+</html>

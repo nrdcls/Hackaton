@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/sucess.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <title>Sucesso</title>
+</head>
+<body>
+    <header>
+        <div id="banner">
+            <img src="img/sucess2.png" alt="Imagem de sucesso">
+        </div>
+        <h1 class="title">Pagamento Realizado!</h1>
+        <div id="infoContainer">
+            <p id="cpfInfo"></p>
+            <p id="valorInfo"></p>
+            <p id="pagamentoInfo"></p> <!-- Elemento para exibir o Método de Pagamento -->
+        </div>
+
+        <script>
+            // Função para obter parâmetros da URL
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            // Obtém os valores dos parâmetros da URL
+            var cpfValue = getParameterByName('cpf');
+            var valorValue = getParameterByName('valor');
+            var pagamentoValue = getParameterByName('pagamento'); // Obtém o Método de Pagamento
+
+            // Exibe os valores na página
+            document.getElementById('cpfInfo').textContent = 'CPF: ' + cpfValue;
+            document.getElementById('valorInfo').textContent = 'Valor da Doação: R$ ' + valorValue;
+            document.getElementById('pagamentoInfo').textContent = 'Método de Pagamento: ' + pagamentoValue;
+        </script>
+    </header>
+</body>
+<footer>
+    <p>&copy; 2024 Hackaton MarjoSports & UNIESP. Todos os direitos reservados.</p>
+</footer>
+</html>

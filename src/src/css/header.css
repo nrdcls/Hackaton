@@ -1,0 +1,79 @@
+header {
+    width: 100%;
+    padding: 28x 8%;
+    position: sticky;
+    top: 0;
+}
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navlogo {
+    font-size: 24px;
+    color: #36802D
+    ;
+    position: relative;
+    
+}
+#nav_list{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+.nav-item a{
+    text-decoration: none;
+    color: #77AB59
+    ;
+    font-weight: 600;
+    
+}
+.nav-item.active a{
+    color: #77AB59
+    ;
+    border-bottom: 3px solid #77AB59
+    ;
+    
+    
+}
+#mobile-btn{
+    display: none;
+}
+#mobile-menu{
+    display: none;
+}
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile-btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+        align-items: center; 
+
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    }
+}
